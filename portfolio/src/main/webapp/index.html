@@ -18,6 +18,17 @@
       <p>Click here to get a random fact about me:</p>
       <button onclick="addRandomGreeting()">Generate random fact!</button>
       <div id="greeting-container"></div>
+      <form method="POST">
+        <p>Enter some text here:</p>
+        <textarea name="text-input">hello world</textarea>
+        <br/>
+        <input type="submit" />
+      </form>
+
+      <button onclick="getHelloMsg();">
+        Greetings to Helen Chu!
+      </button>
+      <p id="hello-container"></p>
     </div>
   </body>
 </html>

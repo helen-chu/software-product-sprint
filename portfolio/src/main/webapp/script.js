@@ -26,3 +26,14 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function getHelloMsg() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.json();
+
+    const randGreet = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+  
+    const helloContainer = document.getElementById('hello-container');
+    helloContainer.innerText = randGreet;
+  }
+  
